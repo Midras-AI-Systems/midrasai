@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "midrasai"
-version = "0.1.5"
+version = "0.2.0"
 description = "A simple framework for multimodal RAG"
 authors = ["ajac-zero <ajcardoza2000@gmail.com>"]
 readme = "README.md"
@@ -17,9 +17,11 @@ pillow = { version = "^10", optional = true }
 fastapi = { extras = ["standard"], version = "^0", optional = true }
 huggingface-hub = { extras = ["cli"], version = "^0", optional = true }
 colpali-engine = { version = "^0.3.1", optional = true }
+astrapy = { version = "^2.0.0", optional = true }
 
 [tool.poetry.extras]
 local = ["colpali-engine", "pillow", "fastapi", "huggingface-hub"]
+astrapy = ["astrapy"]
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.3"
